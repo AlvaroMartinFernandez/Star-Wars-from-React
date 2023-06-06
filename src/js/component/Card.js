@@ -1,19 +1,25 @@
 import React from "react";
-import img from "../../img/lego-star-wars.png";
 
-export const Card = () => {
+export const Card = (prop, favorite) => {
   return (
     <div className="card" style={{ width: "18rem" }}>
-      <img src={img} class="card-img-top" alt="..." />
+      <img src={prop.img} class="card-img-top" alt="..." />
       <div className="card-body">
-        <h5 className="card-title">Card title</h5>
-        <p className="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p>
-        <a href={""} className="btn btn-primary">
-          Go somewhere
-        </a>
+        <h5 className="card-title">{prop.title}</h5>
+        <p className="card-text">{prop.description}</p>
+        <div className="card-footer d-flex justify-content-between">
+          <a href={prop.url} className="btn btn-primary">
+            Learn more!
+          </a>
+          {favorite}?
+          <button type="button" className="btn">
+            like
+          </button>
+          :
+          <button type="button" className="btn">
+            dislike
+          </button>
+        </div>
       </div>
     </div>
   );

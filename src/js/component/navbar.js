@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import img from "../../img/star-wars.png";
+import Dropdown from "./DropDown";
 
 export const Navbar = () => {
   return (
@@ -11,16 +12,7 @@ export const Navbar = () => {
         </span>
       </Link>
       <div className="ml-auto">
-        <div class="dropdown">
-          <button
-            className="btn btn-primary dropdown-toggle me-5"
-            type="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Favorites
-          </button>
-        </div>
+        <Dropdown />
       </div>
     </nav>
   );
