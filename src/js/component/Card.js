@@ -1,6 +1,9 @@
 import React from "react";
+import useAppContext from "../store/appContext";
 
-export const Card = (prop, favorite) => {
+export const Card = (prop) => {
+  const contextContent= useAppContext();
+  const favorite=false;
   return (
     <div className="card" style={{ width: "18rem" }}>
       <img src={prop.img} class="card-img-top" alt="..." />
